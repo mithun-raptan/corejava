@@ -1,0 +1,27 @@
+package com.programmingSachin;
+
+public class ZigzagUsingParsing {
+	public static int rev(int num1) {
+		int rev = 0;
+		while(num1!=0) {
+			int digit = num1%10;
+			rev = (rev*10)+ digit;
+		}
+		return rev;
+	}
+		public static void main(String[] args) {
+			int num1 = 12;
+			int num2 = 45;
+			int rev = rev(num1);
+			String ans = "";
+			while(rev!=0) {
+				int digit1 = rev%10;
+				int digit2 = num2%10;
+				ans = ans+ (digit1 + "" + digit2);
+				rev/=10;
+				num2/=10;
+			}
+			int x = Integer.parseInt(ans);
+			System.out.println(x+1);
+		}
+}

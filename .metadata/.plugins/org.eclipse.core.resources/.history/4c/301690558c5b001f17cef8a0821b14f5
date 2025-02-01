@@ -1,0 +1,38 @@
+package com.programmingSachin2DArray;
+
+public class ProgramTask6 {
+
+	public static void prime(int[][] brr) {
+
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr[row].length; col++) {
+				int count = 0;
+				for (int i = 1; i <= brr[row][col]; i++) {
+
+					if (brr[row][col] % i == 0) {
+						count++;
+					}
+
+				}
+				if (count == 2) {
+					System.out.println(brr[row][col]);
+				}
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		int[][] arr = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+		int[][] brr = new int[3][3];
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr.length; col++) {
+				if (row >= col) {
+					brr[row][col] = arr[row][col];
+				}
+			}
+		}
+		prime(brr);
+	}
+
+}

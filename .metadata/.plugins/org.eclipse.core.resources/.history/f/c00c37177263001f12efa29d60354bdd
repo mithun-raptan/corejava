@@ -1,0 +1,13 @@
+package com.programming.String;
+
+public class ConvertDoubleSpaceToSingleSpace {
+	public static void main(String[] args) {
+
+		String s = "water  is  crystal  and  clear";
+		char[] charArray = s.toCharArray();
+		
+		System.out.println(charArray);
+	}
+	 
+
+}

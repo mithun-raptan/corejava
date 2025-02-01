@@ -1,0 +1,20 @@
+package com.programming.String;
+
+public class ConvertDoubleSpaceToSingleSpace {
+	public static void main(String[] args) {
+
+		String s = "water  is  crystal  and clear";
+		char[] charArray = s.toCharArray();
+		
+		
+		for(int i = 0;i<charArray.length;i++) {
+			if(charArray[i]==' ' && charArray[i+1] ==' ') {
+				charArray[i+1]=charArray[i+2];
+			}
+		}
+		
+		System.out.println(charArray);
+	}
+	 
+
+}

@@ -1,0 +1,55 @@
+package com.programmingSachin2DArray;
+
+import java.util.Arrays;
+
+public class ProgramTask8 {
+	
+	private static int summation(int[][] brr) {
+		int sum=0;
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr[row].length; col++) {
+				sum=sum+brr[row][col];
+			}
+		}
+		return sum;
+	}
+	public static void main(String[] args) {
+		int[][]arr= {{11,22,33},
+				       {9,8,7},
+				       {3,2,1}
+				             };
+		int[][]brr=new int[3][3];
+		int midEle = arr[1][1];
+		
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr[row].length; col++) {
+				
+				if ((col==0 || col==2  ) || (row==0 || row==2)) {
+					brr[row][col]=arr[row][col];
+					
+				}
+				
+			}
+		}
+		System.out.println(Arrays.deepToString(brr));
+		int sum= summation(brr);
+		System.out.println("total sum = "+sum);
+	
+	for (int row = 0; row < brr.length; row++) {
+		for (int col = 0; col < brr.length; col++) {
+			if (row==1 && col==1) {
+				 brr[row][col]=sum*midEle;
+			}
+		}
+		
+	}
+	
+	System.out.println("updated array : " +Arrays.deepToString(brr));
+
+
+
+
+
+
+}
+}

@@ -1,0 +1,58 @@
+package com.programmingSachin.Array;
+
+import java.util.Arrays;
+
+//task
+
+public class Array22 {
+	public static void main(String[] args) {
+		int[] arr = { -10, 2, 3, -14 };
+		int[] brr = { -10, 2, 3, -14 };
+		boolean b = false;
+		if (arr.length == brr.length) {
+			for (int i = 0; i < arr.length; i++) {
+				if (arr[i] != brr[i]) {
+					System.out.println("arrays elements are not same,,, NOT IDENTICAL");
+					return;
+
+				} else {
+					b = true;
+
+				}
+			}
+
+		} else {
+			System.out.println("arrays are not identical");
+		}
+		
+		//create new array
+		int[] brr1 = new int[brr.length];
+		int j =0;
+		for(int i = 0; i<brr.length; i++) {
+			if(brr[i]<brr1[j]) {
+				
+				brr1[j]=brr[i];
+				j++;
+			}
+			
+			
+		}
+		for(int i = 0 ; i < brr.length;i++) {
+			if(brr[i]>0) {
+				brr1[j]=brr[i];
+				j++;
+			}
+		}
+		
+		System.out.println(Arrays.toString(brr1));
+		
+		// sum operation
+		for(int i =0; i<brr1.length;i++) {
+			arr[i]= arr[i]+brr1[i];
+		}
+		System.out.println(Arrays.toString(arr));
+		
+		
+
+	}
+}

@@ -1,0 +1,46 @@
+package com.programming;
+
+public class MargeTwoSortedArray {
+	
+	
+	public static void main(String[] args) {
+		int[] a1 = {2,5,7};
+		int[] a2 = {3,4,8};
+		int[] a = new int[a1.length + a2.length];
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		while(i<a1.length && j<a2.length) {
+			if(a1[i]<a2[j]) {
+				a[k] = a1[i];
+				i++;
+				k++;
+			}
+			else {
+				a[k] = a2[j];
+				j++;
+				k++;
+			}
+				
+				
+		}
+		
+		while(i<a1.length) {
+			a[k] = a1[i];
+			i++;
+			k++;
+		}
+		
+		while(j<a2.length) {
+			a[k] = a2[j];
+			j++;
+			k++;
+		}
+		
+		for(int el: a) {
+			System.out.print(el + " ");
+		}
+		
+	}
+
+}

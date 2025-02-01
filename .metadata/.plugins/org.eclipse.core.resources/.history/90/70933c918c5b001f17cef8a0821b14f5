@@ -1,0 +1,51 @@
+package com.programmingSachin2DArray;
+
+public class ProgramTask7 {
+	
+	private static void perfect(int[][] brr) {
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr.length; col++) {
+				int sum=0;
+				for(int i=1; i<brr[row][col]; i++)
+				{
+				if (brr[row][col]%i==0)
+				{
+					sum=sum+i;
+				}
+				}
+				if(brr[row][col]==sum)
+				{
+				System.out.print(sum+"is a perfect");
+				}
+			}
+		}
+		
+	}
+
+
+	
+	
+	public static void main(String[] args) {
+		int[][]arr= {{9,8,7},
+		        {6,5,4},
+	       	    {3,2,1}};
+		int [][]brr=new int [3][3];
+		for (int row = 0; row < brr.length; row++) {
+			for (int col = 0; col < brr.length; col++) {
+				
+				if (row+col<=col+2) {
+					brr[row][col]=arr[row][col];
+
+				}
+				
+			}
+			
+		}
+			perfect(brr);
+		
+		
+	}
+
+
+
+}
